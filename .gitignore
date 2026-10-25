@@ -1,14 +1,27 @@
-# R session, local credentials and private data
+# R session files and local configuration
+.Rproj.user/
 .Rhistory
 .RData
 .Ruserdata
-.Rproj.user/
-.Renviron
-.Renviron.*
+.Renviron*
 .Rprofile.local
-.env
-.env.*
-!.env.example
+.env*
+
+# Local directories
+/.*/
+!/.github/
+node_modules/
+__pycache__/
+dist/
+inst/doc/
+
+# Root documentation retained only in the local checkout
+/*.md
+!/README.md
+!/NEWS.md
+!/LICENSE.md
+
+# Credentials and private data
 *oauth-credentials*
 *oauth-registration*
 oauth-session.lock
@@ -25,29 +38,15 @@ conversations/
 *.rda
 *.RData
 
-# Reproducible local output; publish dist artifacts through Releases later
-.local/
-dist/
+# Build output and temporary files
 *.Rcheck/
 *.tar.gz
 *.zip
-__pycache__/
-.DS_Store
-Thumbs.db
-
-# Local editor/agent state and disposable files (keep project AGENTS.md)
-.codex/
-.claude/
-.engram/
-.idea/
-.vscode/
-.history/
 *.tmp
 *.temp
 *.bak
 *.swp
 *.swo
 *~
-.pytest_cache/
-.venv/
-node_modules/
+.DS_Store
+Thumbs.db

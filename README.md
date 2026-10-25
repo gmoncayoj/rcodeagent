@@ -16,11 +16,11 @@ The plugin interface is available in **English and Spanish**, with **English as 
 
 You need **R 4.2 or later**, **RStudio Desktop** and an **eligible ChatGPT Plus or Pro subscription**. OpenAI's [Sign in with ChatGPT quickstart](https://developers.openai.com/siwc/quickstart) specifies Plus and Pro eligibility for model requests through this open-source integration. **ChatGPT Free is not supported for model usage.** Signing in alone does not authorize inference: your account must grant ChatGPT plan usage, and available models and limits depend on OpenAI's current policies.
 
-Download this repository with **Code → Download ZIP** and extract it, or clone it. In RStudio, set your working directory to the package folder containing `DESCRIPTION`, then run:
+Install directly from [GitHub](https://github.com/gmoncayoj/rcodeagent) using `remotes`, then launch the assistant inside RStudio:
 
 ```r
 install.packages("remotes") # First time only
-remotes::install_local(".", upgrade = "never")
+remotes::install_github("gmoncayoj/rcodeagent", upgrade = "never")
 rcodeagent::rcodeagent()
 ```
 
@@ -54,13 +54,13 @@ mean(scores, na.rm = TRUE)
 
 Review generated code and results, and report problems with synthetic examples. Current validation and platform limitations are documented in the validation report.
 
-Code submitted for execution uses your R session permissions and may be queued by RStudio. Selected context is sent to the authorized service. Read the [security and privacy notes](SECURITY.md) before sharing confidential code or research data.
+Code submitted for execution uses your R session permissions and may be queued by RStudio. Selected context is sent to the authorized service. Share only code and data you are authorized to send. Credentials remain in the operating-system credential store; local histories and exports must also be handled as potentially sensitive files.
 
 ## Documentation
 
 - [English user manual](docs/manual/rcodeagent-0.1.0-Manual-EN.pdf)
 - [Spanish user manual](docs/manual/rcodeagent-0.1.0-Manual-ES.pdf)
-- [CRAN preparation and validation](docs/validation/cran-readiness.md) · [Contributing](CONTRIBUTING.md)
+- [CRAN preparation and validation](docs/validation/cran-readiness.md)
 
 **Author and maintainer:** José Gamarra-Moncayo
 

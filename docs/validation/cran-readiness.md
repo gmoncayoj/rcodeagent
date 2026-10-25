@@ -1,5 +1,12 @@
 # CRAN preparation - rcodeagent 0.1.0
 
+Archive scope: the checks below apply to the exact SHA-256 recorded here. A later
+GitHub presentation update simplified NEWS and the repository documentation and
+exclusions without changing R code, tests, installed help or runtime assets.
+That update was built successfully and its package file list was compared with
+this archive. It does not constitute a new three-platform CRAN check of a rebuilt
+archive; retain the fingerprints below as evidence for their original input.
+
 Preparation date: October 25, 2026. This is a local submission candidate; no
 submission, commit or push has been made.
 

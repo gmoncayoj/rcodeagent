@@ -12,8 +12,6 @@
 - [OAuth cancellation and account choice](validation/oauth-account-choice.md)
 - [Free-account connection attempt and diagnostics](validation/free-account-connection.md)
 - [Account section display](validation/account-section.md)
-- [Security and privacy](../SECURITY.md)
-- [Contributing and local checks](../CONTRIBUTING.md)
 
 ## Evidence and reference material
 
