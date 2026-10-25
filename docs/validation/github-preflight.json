@@ -1,0 +1,27 @@
+{
+  "verified_on": "2026-10-25",
+  "git_candidate_files": 176,
+  "byte_identical_duplicates": [],
+  "authorship_trailers": [],
+  "effective_identity": {
+    "GIT_AUTHOR_IDENT": "José Gamarra-Moncayo <gamarramoncayoj@gmail.com> 1792969479 -0500",
+    "GIT_COMMITTER_IDENT": "José Gamarra-Moncayo <gamarramoncayoj@gmail.com> 1792969479 -0500"
+  },
+  "pdf_metadata": [
+    {
+      "path": "docs/manual/rcodeagent-0.1.0-Manual-EN.pdf",
+      "author": "José Gamarra-Moncayo",
+      "producer": "ReportLab PDF Library - (opensource)"
+    },
+    {
+      "path": "docs/manual/rcodeagent-0.1.0-Manual-ES.pdf",
+      "author": "José Gamarra-Moncayo",
+      "producer": "ReportLab PDF Library - (opensource)"
+    }
+  ],
+  "no_commits_staging_remotes": true,
+  "no_active_hooks_or_commit_template": true,
+  "ignored_private_and_temporary_paths_verified": true,
+  "removed_entries": 32,
+  "scope": "Current local state only; no commit or push performed. Future commit metadata must be rechecked before publication."
+}

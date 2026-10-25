@@ -1,0 +1,344 @@
+✔ | F W  S  OK | Context
+
+⠏ |          0 | assistant                                                      
+⠋ |          1 | assistant                                                      
+⠼ |          5 | assistant                                                      
+⠹ |         13 | assistant                                                      
+✔ |         17 | assistant
+
+⠏ |          0 | auth-callback                                                  
+⠸ |          4 | auth-callback                                                  
+⠋ |         11 | auth-callback                                                  
+✔ |         16 | auth-callback
+
+⠏ |          0 | auth-lifecycle                                                 
+⠋ |          1 | auth-lifecycle                                                 
+⠏ |         10 | auth-lifecycle                                                 
+⠸ |         14 | auth-lifecycle                                                 
+⠦ |         17 | auth-lifecycle                                                 
+⠏ |         20 | auth-lifecycle                                                 
+⠹ |         23 | auth-lifecycle                                                 
+⠴ |         26 | auth-lifecycle                                                 
+⠇ |         29 | auth-lifecycle                                                 
+⠙ |         32 | auth-lifecycle                                                 
+⠴ |         36 | auth-lifecycle                                                 
+⠇ |         39 | auth-lifecycle                                                 
+⠙ |         42 | auth-lifecycle                                                 
+⠸ |         44 | auth-lifecycle                                                 
+⠧ |         48 | auth-lifecycle                                                 
+⠙ |         52 | auth-lifecycle                                                 
+⠴ |         56 | auth-lifecycle                                                 
+⠧ |         58 | auth-lifecycle                                                 
+⠸ |         64 | auth-lifecycle                                                 
+⠦ |         67 | auth-lifecycle                                                 
+✔ |         68 | auth-lifecycle [7.3s]
+
+Loading required package: shiny
+⠏ |          0 | auto-notice                                                    
+⠋ |          1 | auto-notice                                                    
+⠼ |          5 | auto-notice                                                    
+✔ |          6 | auto-notice [2.3s]
+
+⠏ |          0 | auto-session                                                   
+⠋ |          1 | auto-session                                                   
+⠹ |          3 | auto-session                                                   
+⠼ |          5 | auto-session                                                   
+⠦ |          7 | auto-session                                                   
+⠹ |         13 | auto-session                                                   
+⠴ |         16 | auto-session                                                   
+⠇ |         19 | auto-session                                                   
+⠹ |         23 | auto-session                                                   
+⠼ |         25 | auto-session                                                   
+⠴ |         26 | auto-session                                                   
+⠦ |         27 | auto-session                                                   
+⠧ |         28 | auto-session                                                   
+⠏ |         30 | auto-session                                                   
+✔ |         30 | auto-session [8.3s]
+
+⠏ |          0 | background-editor                                              
+⠦ |          7 | background-editor                                              
+✔ |          8 | background-editor
+
+⠏ |          0 | background                                                     
+⠙ |          2 | background                                                     
+⠇ |          9 | background                                                     
+⠹ |         13 | background                                                     
+⠦ |         17 | background                                                     
+⠋ |         21 | background                                                     
+⠧ |         28 | background                                                     
+⠼ |         35 | background                                                     
+✔ |         37 | background
+
+⠏ |          0 | connection-errors                                              
+⠴ |          6 | connection-errors                                              
+⠏ |         10 | connection-errors                                              
+⠸ |         24 | connection-errors                                              
+⠋ |         31 | connection-errors                                              
+✔ |         31 | connection-errors
+
+⠏ |          0 | context-auto                                                   
+⠋ |          1 | context-auto                                                   
+⠙ |          2 | context-auto                                                   
+⠼ |          5 | context-auto                                                   
+⠴ |          6 | context-auto                                                   
+⠧ |          8 | context-auto                                                   
+⠏ |         10 | context-auto                                                   
+⠹ |         13 | context-auto                                                   
+⠦ |         17 | context-auto                                                   
+⠋ |         21 | context-auto                                                   
+⠙ |         22 | context-auto                                                   
+⠹ |         23 | context-auto                                                   
+⠼ |         25 | context-auto                                                   
+⠴ |         26 | context-auto                                                   
+⠏ |         30 | context-auto                                                   
+✔ |         31 | context-auto [5.5s]
+
+⠏ |          0 | edit-patches                                                   
+⠴ |          6 | edit-patches                                                   
+⠸ |         14 | edit-patches                                                   
+✔ |         16 | edit-patches
+
+⠏ |          0 | editor                                                         
+⠋ |          1 | editor                                                         
+⠦ |          7 | editor                                                         
+⠇ |          9 | editor                                                         
+⠋ |         11 | editor                                                         
+✔ |         13 | editor [3.2s]
+
+⠏ |          0 | effort                                                         
+⠦ |          7 | effort                                                         
+⠼ |         15 | effort                                                         
+⠧ |         18 | effort                                                         
+⠏ |         20 | effort                                                         
+✔ |         22 | effort [1.0s]
+
+⠏ |          0 | empty-edit                                                     
+⠴ |          6 | empty-edit                                                     
+⠦ |          7 | empty-edit                                                     
+⠙ |         12 | empty-edit                                                     
+⠴ |         16 | empty-edit                                                     
+⠦ |         17 | empty-edit                                                     
+⠇ |         19 | empty-edit                                                     
+✔ |         19 | empty-edit [2.4s]
+
+⠏ |          0 | execution-formals                                              
+⠙ |          2 | execution-formals                                              
+⠇ |          9 | execution-formals                                              
+⠼ |         15 | execution-formals                                              
+⠴ |         16 | execution-formals                                              
+⠇ |         19 | execution-formals                                              
+⠙ |         22 | execution-formals                                              
+⠸ |         24 | execution-formals                                              
+⠴ |         26 | execution-formals                                              
+✔ |         27 | execution-formals [2.4s]
+
+⠏ |          0 | execution-server                                               
+⠋ |          1 | execution-server                                               
+⠴ |          6 | execution-server                                               
+⠙ |         12 | execution-server                                               
+⠼ |         15 | execution-server                                               
+⠦ |         17 | execution-server                                               
+⠙ |         22 | execution-server                                               
+⠼ |         25 | execution-server                                               
+⠦ |         27 | execution-server                                               
+⠏ |         30 | execution-server                                               
+⠼ |         35 | execution-server                                               
+⠏ |         40 | execution-server                                               
+✔ |         42 | execution-server [8.6s]
+
+⠏ |          0 | execution                                                      
+⠴ |          6 | execution                                                      
+⠼ |         15 | execution                                                      
+⠹ |         23 | execution                                                      
+⠋ |         31 | execution                                                      
+⠏ |         40 | execution                                                      
+⠧ |         48 | execution                                                      
+⠸ |         54 | execution                                                      
+⠸ |         64 | execution                                                      
+⠏ |         70 | execution                                                      
+⠇ |         79 | execution                                                      
+✔ |         80 | execution [1.1s]
+
+⠏ |          0 | export                                                         
+⠙ |          2 | export                                                         
+⠴ |          6 | export                                                         
+⠏ |         10 | export                                                         
+✔ |         12 | export
+
+⠏ |          0 | helpers                                                        
+⠼ |          5 | helpers                                                        
+✔ |          6 | helpers
+
+⠏ |          0 | native-ipc                                                     
+⠋ |          1 | native-ipc                                                     
+⠼ |          5 | native-ipc                                                     
+⠦ |          7 | native-ipc                                                     
+⠇ |          9 | native-ipc                                                     
+⠹ |         13 | native-ipc                                                     
+⠦ |         17 | native-ipc                                                     
+⠋ |         21 | native-ipc                                                     
+⠸ |         24 | native-ipc                                                     
+⠦ |         27 | native-ipc                                                     
+⠇ |         29 | native-ipc                                                     
+✔ |         32 | native-ipc [23.5s]
+
+⠏ |          0 | normal-auto                                                    
+⠦ |          7 | normal-auto                                                    
+⠙ |         12 | normal-auto                                                    
+⠸ |         14 | normal-auto                                                    
+⠴ |         16 | normal-auto                                                    
+⠦ |         17 | normal-auto                                                    
+⠇ |         19 | normal-auto                                                    
+✔ |         20 | normal-auto [5.6s]
+
+⠏ |          0 | oauth-account-choice                                           
+⠼ |          5 | oauth-account-choice                                           
+⠏ |         10 | oauth-account-choice                                           
+⠧ |         18 | oauth-account-choice                                           
+✔ |         19 | oauth-account-choice [1.0s]
+
+⠏ |          0 | oauth-notice                                                   
+⠋ |          1 | oauth-notice                                                   
+⠙ |          2 | oauth-notice                                                   
+⠇ |          9 | oauth-notice                                                   
+✔ |         10 | oauth-notice [1.1s]
+
+⠏ |          0 | preferences                                                    
+⠙ |          2 | preferences                                                    
+⠼ |          5 | preferences                                                    
+⠧ |          8 | preferences                                                    
+⠏ |         10 | preferences                                                    
+⠋ |         11 | preferences                                                    
+⠹ |         13 | preferences                                                    
+⠦ |         17 | preferences                                                    
+⠏ |         20 | preferences                                                    
+✔ |         20 | preferences [2.7s]
+
+⠏ |          0 | rendering                                                      
+⠦ |          7 | rendering                                                      
+✔ |          8 | rendering
+
+⠏ |          0 | request-errors                                                 
+⠋ |          1 | request-errors                                                 
+✔ |          3 | request-errors [2.8s]
+
+⠏ |          0 | server                                                         
+⠋ |          1 | server                                                         
+⠼ |          5 | server                                                         
+⠦ |          7 | server                                                         
+⠋ |         11 | server                                                         
+⠸ |         14 | server                                                         
+✔ |         15 | server [3.6s]
+
+⠏ |          0 | session-context                                                
+⠼ |          5 | session-context                                                
+⠇ |          9 | session-context                                                
+✔ |         10 | session-context
+
+⠏ |          0 | startup                                                        
+⠋ |          1 | startup                                                        
+⠸ |          4 | startup                                                        
+⠦ |          7 | startup                                                        
+✔ |          9 | startup [2.0s]
+
+⠏ |          0 | storage-profile                                                
+⠸ |          4 | storage-profile                                                
+⠇ |          9 | storage-profile                                                
+⠸ |         14 | storage-profile                                                
+⠧ |         18 | storage-profile                                                
+✔ |         19 | storage-profile [4.0s]
+
+⠏ |          0 | stream                                                         
+⠼ |          5 | stream                                                         
+⠇ |          9 | stream                                                         
+✔ |         10 | stream
+
+⠏ |          0 | tokens                                                         
+⠹ |          3 | tokens                                                         
+⠧ |          8 | tokens                                                         
+⠇ |          9 | tokens                                                         
+✔ |         10 | tokens [1.8s]
+
+⠏ |          0 | unsaved-editor                                                 
+⠋ |          1 | unsaved-editor                                                 
+⠹ |          3 | unsaved-editor                                                 
+⠴ |          6 | unsaved-editor                                                 
+⠧ |          8 | unsaved-editor                                                 
+⠇ |          9 | unsaved-editor                                                 
+⠏ |         10 | unsaved-editor                                                 
+⠼ |         15 | unsaved-editor                                                 
+⠙ |         22 | unsaved-editor                                                 
+⠹ |         23 | unsaved-editor                                                 
+⠧ |         28 | unsaved-editor                                                 
+⠇ |         29 | unsaved-editor                                                 
+⠋ |         31 | unsaved-editor                                                 
+⠸ |         34 | unsaved-editor                                                 
+⠧ |         38 | unsaved-editor                                                 
+✔ |         42 | unsaved-editor [9.6s]
+
+⠏ |          0 | verified-editor                                                
+⠋ |          1 | verified-editor                                                
+⠸ |          4 | verified-editor                                                
+⠴ |          6 | verified-editor                                                
+⠦ |          7 | verified-editor                                                
+⠏ |         10 | verified-editor                                                
+✔ |         10 | verified-editor
+
+⠏ |          0 | viewer-auth                                                    
+⠋ |          1 | viewer-auth                                                    
+⠸ |          4 | viewer-auth                                                    
+⠦ |          7 | viewer-auth                                                    
+⠏ |         10 | viewer-auth                                                    
+⠹ |         13 | viewer-auth                                                    
+⠴ |         16 | viewer-auth                                                    
+✔ |         18 | viewer-auth
+
+⠏ |          0 | viewer-recovery                                                
+⠋ |          1 | viewer-recovery                                                
+⠹ |          3 | viewer-recovery                                                
+⠸ |          4 | viewer-recovery                                                
+⠇ |          9 | viewer-recovery                                                
+⠋ |         11 | viewer-recovery                                                
+⠹ |         13 | viewer-recovery                                                
+⠸ |         14 | viewer-recovery                                                
+⠴ |         16 | viewer-recovery                                                
+⠇ |         19 | viewer-recovery                                                
+⠙ |         22 | viewer-recovery                                                
+⠹ |         23 | viewer-recovery                                                
+⠸ |         24 | viewer-recovery                                                
+⠼ |         25 | viewer-recovery                                                
+⠴ |         26 | viewer-recovery                                                
+⠦ |         27 | viewer-recovery                                                
+⠧ |         28 | viewer-recovery                                                
+⠋ |         31 | viewer-recovery                                                
+⠙ |         32 | viewer-recovery                                                
+⠹ |         33 | viewer-recovery                                                
+⠸ |         34 | viewer-recovery                                                
+⠧ |         38 | viewer-recovery                                                
+⠇ |         39 | viewer-recovery                                                
+⠏ |         40 | viewer-recovery                                                
+⠸ |         44 | viewer-recovery                                                
+⠼ |         45 | viewer-recovery                                                
+⠴ |         46 | viewer-recovery                                                
+⠋ |         51 | viewer-recovery                                                
+⠙ |         52 | viewer-recovery                                                
+⠦ |         57 | viewer-recovery                                                
+⠧ |         58 | viewer-recovery                                                
+⠙ |         62 | viewer-recovery                                                
+⠹ |         63 | viewer-recovery                                                
+⠴ |         66 | viewer-recovery                                                
+⠧ |         68 | viewer-recovery                                                
+⠙ |         72 | viewer-recovery                                                
+⠼ |         75 | viewer-recovery                                                
+⠧ |         78 | viewer-recovery                                                
+⠙ |         82 | viewer-recovery                                                
+⠹ |         83 | viewer-recovery                                                
+⠼ |         85 | viewer-recovery                                                
+⠧ |         88 | viewer-recovery                                                
+⠏ |         90 | viewer-recovery                                                
+✔ |         91 | viewer-recovery [38.7s]
+
+══ Results ═════════════════════════════════════════════════════════════════════
+Duration: 144.8 s
+
+[ FAIL 0 | WARN 0 | SKIP 0 | PASS 827 ]

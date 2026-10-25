@@ -1,0 +1,56 @@
+{
+  "package": "rcodeagent",
+  "version": "0.1.0",
+  "verified_on": "2026-10-25",
+  "archive": "dist/rcodeagent_0.1.0.tar.gz",
+  "archive_sha256": "9722E46A057AF4726A4B6072258B0EC067415462BE06272975312E85D28F5FD0",
+  "archive_bytes": 681753,
+  "archive_files": 72,
+  "source_files_equal": 71,
+  "r_sources_ascii": true,
+  "checks": [
+    {
+      "environment": "Windows R-release",
+      "r_version": "version 4.6.1 (2026-06-24 ucrt)",
+      "command": "R CMD check --as-cran",
+      "log": "docs/validation/cran-windows-r-release.log",
+      "log_sha256": "7770F26F395A580983FA266DD0FFBA94C224A80C515077A998BE9CA3AF249C01",
+      "tests_passed": 827,
+      "tests_log": "docs/validation/cran-windows-r-release-tests.log",
+      "tests_log_sha256": "73F738D13F9B256606770C54951597EC0D7CA674EA3379A17A080C423C977CF5",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 1
+    },
+    {
+      "environment": "Linux R-release",
+      "r_version": "version 4.6.1 (2026-06-24)",
+      "command": "R CMD check --as-cran",
+      "log": "docs/validation/cran-linux-r-release.log",
+      "log_sha256": "EC72BAADB90D500CBD74255928A398E367EAA5AD2D404467A4995CCCB430FD0D",
+      "tests_passed": 827,
+      "tests_log": "docs/validation/cran-linux-r-release-tests.log",
+      "tests_log_sha256": "6EBBA999EA41A23CA97B2A4186E22BFD403A7095C2CBAC7C60AC09051D986963",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 1
+    },
+    {
+      "environment": "Linux R-devel",
+      "r_version": "Under development (unstable) (2026-10-18 r90707)",
+      "command": "R CMD check --as-cran",
+      "log": "docs/validation/cran-linux-r-devel.log",
+      "log_sha256": "E1C05D798C2226377CFE4EE3F8C2A3429BDB2A2085E3451F87B5BBB36092E5D4",
+      "tests_passed": 827,
+      "tests_log": "docs/validation/cran-linux-r-devel-tests.log",
+      "tests_log_sha256": "9F6EEBA25788A8EB73342403314BDB226DB035A1E9215B77B789F7DD6622A38C",
+      "errors": 0,
+      "warnings": 0,
+      "notes": 1
+    }
+  ],
+  "limitations": [
+    "No CRAN submission or remote CI run",
+    "Automated checks use synthetic service/editor fixtures; native IDE/provider lifecycle is separate"
+  ]
+}

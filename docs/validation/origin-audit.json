@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "synthetic_only": true,
+  "real_credentials_used": false,
+  "native_rstudio": false,
+  "browser": "155.0.8059.80",
+  "permission": "local-network-access granted only in isolated context",
+  "foreign_https": [
+    {
+      "private_fragment_supplied": false,
+      "opened": true,
+      "restore_received": false,
+      "draft_exposed": false,
+      "auto_exposed": false,
+      "closed": true
+    },
+    {
+      "private_fragment_supplied": true,
+      "opened": true,
+      "restore_received": false,
+      "draft_exposed": false,
+      "auto_exposed": false,
+      "closed": true
+    }
+  ],
+  "missing_or_wrong_fragment": [
+    {
+      "wrong_fragment": false,
+      "rejected": true
+    },
+    {
+      "wrong_fragment": true,
+      "rejected": true
+    }
+  ],
+  "checkpoint_preserved": true,
+  "legitimate_resume": true,
+  "no_writes": true
+}

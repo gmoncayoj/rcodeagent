@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-24",
+  "passed": true,
+  "approved_reference": "docs/proposals/dark-theme/preview-980.png",
+  "computed_backgrounds": {
+    "main": "#161616",
+    "sidebar": "#1b1b1b",
+    "modal": "#252525",
+    "card": "#202020",
+    "notification": "#252525"
+  },
+  "viewports": [
+    980,
+    1280,
+    560
+  ],
+  "contrast": [
+    {
+      "name": "body",
+      "foreground": "#ededed",
+      "background": "#161616",
+      "ratio": 15.46,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "secondary",
+      "foreground": "#bdbdbd",
+      "background": "#1b1b1b",
+      "ratio": 9.17,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "placeholder",
+      "foreground": "#aaaaaa",
+      "background": "#1b1b1b",
+      "ratio": 7.41,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "menu",
+      "foreground": "#ededed",
+      "background": "#292929",
+      "ratio": 12.43,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "selected-context",
+      "foreground": "#ffffff",
+      "background": "#303030",
+      "ratio": 13.2,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "focus",
+      "foreground": "#37cfed",
+      "background": "#161616",
+      "ratio": 9.75,
+      "minimum": 3,
+      "passed": true
+    },
+    {
+      "name": "send-icon",
+      "foreground": "#ffffff",
+      "background": "#1698f5",
+      "ratio": 3.07,
+      "minimum": 3,
+      "passed": true
+    }
+  ],
+  "console_errors": [],
+  "native_rstudio": false,
+  "real_provider": false,
+  "installed_pass": 694,
+  "check_errors": 0,
+  "check_warnings": 1,
+  "check_notes": 0
+}

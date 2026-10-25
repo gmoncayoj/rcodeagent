@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "version": "1.0.0",
+  "auto_notice_single": true,
+  "auto_notice_auto_dismiss_5s": true,
+  "normal_chat_only": true,
+  "auto_edit": true,
+  "explicit_line_execution": true,
+  "library_no_duplicate": true,
+  "package_install_without_confirmation": true,
+  "explicit_execution_without_confirmation": true,
+  "administrative_one_use_confirmation": true,
+  "context_preserves_auto": true,
+  "viewer_no_execution_replay": true,
+  "viewer_auto_restored": true,
+  "normal_restored": true,
+  "conflict_revokes_auto": true,
+  "pending_worker_cancelled": true,
+  "es_en": true,
+  "viewports": [
+    1280,
+    560
+  ],
+  "console_errors": [],
+  "native_rstudio": false,
+  "real_provider": false
+}

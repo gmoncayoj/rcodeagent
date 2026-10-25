@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-18",
+  "synthetic_only": true,
+  "real_credentials_used": false,
+  "total_suite_passed": 573,
+  "regression_assertions": 32,
+  "cases": [
+    {
+      "test": "an explicit edit proposal can replace its captured context with empty text",
+      "passed": 6,
+      "failed": 0,
+      "error": false,
+      "warning": 0,
+      "skipped": false
+    },
+    {
+      "test": "Auto can delete the last line without changing another editor",
+      "passed": 5,
+      "failed": 0,
+      "error": false,
+      "warning": 0,
+      "skipped": false
+    },
+    {
+      "test": "Editor exposes and reviews an empty replacement before any write",
+      "passed": 7,
+      "failed": 0,
+      "error": false,
+      "warning": 0,
+      "skipped": false
+    },
+    {
+      "test": "empty replacement still requires a shared target",
+      "passed": 1,
+      "failed": 0,
+      "error": false,
+      "warning": 0,
+      "skipped": false
+    },
+    {
+      "test": "an empty reviewed edit cannot overwrite a manual change",
+      "passed": 2,
+      "failed": 0,
+      "error": false,
+      "warning": 0,
+      "skipped": false
+    },
+    {
+      "test": "deleting a selection sends empty text only to the captured range",
+      "passed": 1,
+      "failed": 0,
+      "error": false,
+      "warning": 0,
+      "skipped": false
+    },
+    {
+      "test": "worker errors expose the root message without terminal escape sequences",
+      "passed": 2,
+      "failed": 0,
+      "error": false,
+      "warning": 0,
+      "skipped": false
+    },
+    {
+      "test": "direct errors keep their message and remove only terminal formatting",
+      "passed": 1,
+      "failed": 0,
+      "error": false,
+      "warning": 0,
+      "skipped": false
+    },
+    {
+      "test": "empty manual proposals survive recovery and still need a new review",
+      "passed": 7,
+      "failed": 0,
+      "error": false,
+      "warning": 0,
+      "skipped": false
+    }
+  ]
+}

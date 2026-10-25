@@ -1,0 +1,141 @@
+{
+  "checked_on": "2026-10-25",
+  "name": "rcodeagent",
+  "cran_current_conflict": false,
+  "cran_archive_conflict": false,
+  "bioconductor_software_conflict": false,
+  "requirements": [
+    {
+      "package": "R",
+      "required": "R (>= 4.2.0)",
+      "available": "4.6.1",
+      "version_ok": true
+    },
+    {
+      "package": "shiny",
+      "required": "shiny",
+      "available": "1.14.0",
+      "version_ok": true
+    },
+    {
+      "package": "htmltools",
+      "required": "htmltools",
+      "available": "0.5.9",
+      "version_ok": true
+    },
+    {
+      "package": "miniUI",
+      "required": "miniUI",
+      "available": "0.1.2",
+      "version_ok": true
+    },
+    {
+      "package": "rstudioapi",
+      "required": "rstudioapi",
+      "available": "0.19.0",
+      "version_ok": true
+    },
+    {
+      "package": "httpuv",
+      "required": "httpuv",
+      "available": "1.6.17",
+      "version_ok": true
+    },
+    {
+      "package": "httr2",
+      "required": "httr2 (>= 1.2.0)",
+      "available": "1.3.0",
+      "version_ok": true
+    },
+    {
+      "package": "openssl",
+      "required": "openssl",
+      "available": "2.4.2",
+      "version_ok": true
+    },
+    {
+      "package": "jose",
+      "required": "jose (>= 2.0.0)",
+      "available": "2.0.0",
+      "version_ok": true
+    },
+    {
+      "package": "keyring",
+      "required": "keyring",
+      "available": "1.4.1",
+      "version_ok": true
+    },
+    {
+      "package": "sodium",
+      "required": "sodium",
+      "available": "1.4.0",
+      "version_ok": true
+    },
+    {
+      "package": "jsonlite",
+      "required": "jsonlite",
+      "available": "2.0.0",
+      "version_ok": true
+    },
+    {
+      "package": "commonmark",
+      "required": "commonmark",
+      "available": "2.0.0",
+      "version_ok": true
+    },
+    {
+      "package": "xml2",
+      "required": "xml2",
+      "available": "1.6.0",
+      "version_ok": true
+    },
+    {
+      "package": "callr",
+      "required": "callr",
+      "available": "3.8.0",
+      "version_ok": true
+    },
+    {
+      "package": "filelock",
+      "required": "filelock (>= 1.0.3)",
+      "available": "1.0.3",
+      "version_ok": true
+    },
+    {
+      "package": "later",
+      "required": "later",
+      "available": "1.4.8",
+      "version_ok": true
+    },
+    {
+      "package": "utils",
+      "required": "utils",
+      "available": "4.6.1",
+      "version_ok": true
+    },
+    {
+      "package": "grid",
+      "required": "grid",
+      "available": "4.6.1",
+      "version_ok": true
+    },
+    {
+      "package": "testthat",
+      "required": "testthat (>= 3.2.1)",
+      "available": "3.3.2",
+      "version_ok": true
+    },
+    {
+      "package": "withr",
+      "required": "withr",
+      "available": "3.0.3",
+      "version_ok": true
+    },
+    {
+      "package": "pkgload",
+      "required": "pkgload",
+      "available": "1.5.3",
+      "version_ok": true
+    }
+  ]
+}

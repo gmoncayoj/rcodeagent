@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-24",
+  "passed": true,
+  "asset": {
+    "width": 1537,
+    "height": 1023,
+    "format": "PNG RGBA",
+    "src": "rcodeagent-assets/logo.png",
+    "alt": "rcodeagent",
+    "sha256": "9BA65EAF05C3C2E1415D278115CB2C9E5E60ED1315921C05B1A85CD42D351E4D"
+  },
+  "viewports": [
+    1280,
+    560
+  ],
+  "transparent_background": true,
+  "aspect_ratio_preserved": true,
+  "console_errors": [],
+  "native_rstudio": false
+}

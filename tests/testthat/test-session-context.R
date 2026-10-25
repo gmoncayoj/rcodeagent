@@ -1,0 +1,28 @@
+test_that("only authorized text extensions and sizes enter uploaded context", {
+  path <- tempfile(fileext = ".R")
+  writeLines("x <- 1", path)
+  file <- rcodeagent:::.read_context_file("analisis.R", path)
+  expect_equal(file$name, "analisis.R")
+  expect_match(file$text, "x <- 1", fixed = TRUE)
+  expect_error(rcodeagent:::.read_context_file("secreto.csv", path))
+  expect_error(rcodeagent:::.read_context_file("../analisis.R", path))
+  writeBin(as.raw(c(65, 0, 66)), path)
+  expect_error(rcodeagent:::.read_context_file("binario.md", path))
+})
+
+test_that("conversation history round trips without persisting automatic permissions", {
+  directory <- tempfile()
+  dir.create(directory)
+  withr::local_options(rcodeagent.history_dir = directory)
+  chat <- rcodeagent:::.new_conversation()
+  chat$messages <- list(list(role = "Usuario", text = "Consulta", code = ""))
+  chat$auto_mode <- TRUE
+  rcodeagent:::.save_conversation(chat)
+  restored <- rcodeagent:::.load_conversation(chat$id)
+  expect_equal(restored$messages[[1L]]$text, "Consulta")
+  expect_null(restored$auto_mode)
+  expect_length(rcodeagent:::.list_conversations(), 1L)
+  expect_error(rcodeagent:::.load_conversation("../secret"))
+  rcodeagent:::.delete_conversation(chat$id)
+  expect_length(rcodeagent:::.list_conversations(), 0L)
+})

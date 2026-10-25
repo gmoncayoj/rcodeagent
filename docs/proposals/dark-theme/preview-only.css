@@ -1,0 +1,31 @@
+/* Preview only. Not installed or imported by the package. */
+:root { --rg-bg:#161616; --rg-surface:#202020; --rg-line:#3c3c3c; --rg-text:#ededed; --rg-muted:#bdbdbd; --rg-user-bg:#262626; }
+* { scrollbar-color:#535353 #1b1b1b; }
+.rg-workspace { background:#161616; }
+.rg-main { background:#161616; border-left-color:#161616; }
+.rg-sidebar { background:#1b1b1b; border-color:#343434; }
+.rg-sidebar-section { border-color:#343434; }
+.rg-feature { background:#202020; border-color:#383838; }
+.rg-feature:hover { background:#282828; border-color:#606060; }
+.rg-suggestions button { background:#202020; border-color:#3c3c3c; color:#d6d6d6; }
+.rg-context-board { background:#191919; border-color:#3c3c3c; }
+.rg-composer,.rg-compose,.rg-input-wrap { background:#1b1b1b; border-color:#555; }
+#request { background:#1b1b1b; color:#ededed; }
+#request::placeholder { color:#aaa; }
+.btn,.form-control,.rg-menu summary { background:#262626; border-color:#454545; color:#ededed; }
+.btn:hover { background:#333; border-color:#777; }
+.rg-menu-panel { background:#292929; border-color:#525252; }
+.rg-version { border-color:#505050; }
+.rg-user { border-color:#444; }
+.rg-markdown code,.rg-markdown pre,.rg-msg > pre,.rg-proposal pre { background:#202020; border-color:#444; }
+.modal-content,.shiny-notification { background:#252525; border-color:#555; }
+.modal-header,.modal-footer { border-color:#444; }
+.rg-file-chip { background:#303030; }
+.rg-context-actions .btn { background:#242424; }
+.rg-context-actions .btn[aria-pressed="true"] { background:#303030; border-color:#72c8ed; }
+.rg-context-actions .btn:hover { background:#333; }
+.rg-work-menu > summary { border-color:#555; }
+.rg-composer { border-color:#72b8d8; }
+.rg-input-row textarea.form-control { background:transparent; }
+.rg-menu-panel[data-menu-id="mode_menu"] .radio label:hover { background:#383838; }
+#target_label,.rg-token-counter,#effort_label { color:#bdbdbd; }

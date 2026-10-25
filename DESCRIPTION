@@ -1,0 +1,46 @@
+Package: rcodeagent
+Title: Coding Assistant for 'RStudio' with 'ChatGPT' Authentication
+Version: 0.1.0
+Authors@R: person('José', 'Gamarra-Moncayo', role = c('aut', 'cre'),
+    email = 'gamarramoncayoj@gmail.com')
+Description: Provides an interactive coding assistant in the 'RStudio' Viewer
+    to explain R code, draft scripts, and propose changes to a selected editor
+    target. Supports read-only chat, explicitly authorized edits, and
+    user-requested submission of code to the native R console. Authenticates
+    through 'ChatGPT' using browser-based OAuth 2.0 authorization with Proof
+    Key for Code Exchange (PKCE) and stores credentials using the operating
+    system credential store. Model requests
+    require Internet access and an eligible 'ChatGPT' Plus or Pro account under
+    the service's current terms <https://developers.openai.com/siwc/quickstart>.
+    Neither an API key nor 'Codex CLI' is required.
+License: GPL (>= 3)
+Encoding: UTF-8
+Depends: R (>= 4.2.0)
+SystemRequirements: RStudio Desktop (interactive use), web browser, Internet
+    access, operating system credential store, eligible ChatGPT Plus or Pro
+    account (model requests)
+Imports:
+    shiny,
+    htmltools,
+    miniUI,
+    rstudioapi,
+    httpuv,
+    httr2 (>= 1.2.0),
+    openssl,
+    jose (>= 2.0.0),
+    keyring,
+    sodium,
+    jsonlite,
+    commonmark,
+    xml2,
+    callr,
+    filelock (>= 1.0.3),
+    later,
+    utils,
+    grid
+Suggests:
+    testthat (>= 3.2.1),
+    withr,
+    pkgload
+Config/testthat/edition: 3
+RoxygenNote: 7.3.2

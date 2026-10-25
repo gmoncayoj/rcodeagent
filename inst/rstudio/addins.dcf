@@ -1,0 +1,4 @@
+Name: rcodeagent — ChatGPT OAuth nativo
+Description: Conecta ChatGPT sin CLI ni claves API; Normal trabaja en el chat y Auto edita o ejecuta R por petición explícita.
+Binding: rcodeagent
+Interactive: true

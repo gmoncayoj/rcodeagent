@@ -1,0 +1,63 @@
+test_that("language preferences survive reopening and reject invalid values", {
+  path <- tempfile(fileext = ".json")
+  withr::local_options(rcodeagent.preferences_file = path)
+  expect_equal(rcodeagent:::.read_preferences()$language, "en")
+  rcodeagent:::.save_preferences("en")
+  expect_equal(rcodeagent:::.read_preferences()$language, "en")
+  expect_error(rcodeagent:::.save_preferences("fr"))
+  expect_equal(rcodeagent:::.read_preferences()$language, "en")
+  writeLines('{"language":"fr","token":"must not be read"}', path)
+  expect_equal(rcodeagent:::.read_preferences(), list(language = "en"))
+  writeLines('not json', path)
+  expect_equal(rcodeagent:::.read_preferences()$language, "en")
+  rcodeagent:::.save_preferences("es")
+  expect_equal(rcodeagent:::.read_preferences()$language, "es")
+})
+
+test_that("fresh UI configuration and server language start in English", {
+  withr::local_options(rcodeagent.preferences_file = tempfile(fileext = ".json"))
+  rendered <- htmltools::renderTags(rcodeagent:::.rcodeagent_view())
+  view <- xml2::read_html(paste(rendered$head, rendered$html))
+  config <- jsonlite::fromJSON(xml2::xml_text(xml2::xml_find_first(view, "//*[@id='rg-language-data']")))
+  expect_identical(config$language, "en")
+  selected <- xml2::xml_find_first(view, ".//select[@id='ui_language']/option[@selected]")
+  expect_identical(xml2::xml_attr(selected, "value"), "en")
+  testthat::local_mocked_bindings(.snapshot_editor = function() NULL,
+    rcodeagent_status = function() "test", .models_for_account = function() c(Test = "test-model"), .package = "rcodeagent")
+  shiny::testServer(rcodeagent:::.rcodeagent_server, {
+    session$setInputs(ui_language = "en")
+    expect_identical(ui_language(), "en")
+    session$setInputs(ui_language_choice = "es")
+    expect_identical(ui_language(), "es")
+    expect_identical(rcodeagent:::.read_preferences()$language, "es")
+  })
+})
+
+test_that("UI translation does not enter the model prompt", {
+  expect_equal(rcodeagent:::.tr_ui("Cuenta", "en"), "Account")
+  context <- list(text = "x <- 1", path = "demo.R", scope = "documento")
+  before <- rcodeagent:::.construct_prompt("auto", "Responde en español", context, list(), "normal")
+  withr::local_options(rcodeagent.preferences_file = tempfile())
+  rcodeagent:::.save_preferences("en")
+  expect_identical(rcodeagent:::.construct_prompt("auto", "Responde en español", context, list(), "normal"), before)
+  prompt <- rcodeagent:::.construct_prompt("chat", "Answer in English", context, list(), "normal")
+  expect_false(grepl("Responde en español", prompt, fixed = TRUE))
+  expect_false(grepl("en español", jsonlite::toJSON(rcodeagent:::.assistant_tools(TRUE)), fixed = TRUE))
+})
+
+test_that("initial select synchronization cannot overwrite the saved language", {
+  path <- tempfile(fileext = ".json")
+  withr::local_options(rcodeagent.preferences_file = path)
+  rcodeagent:::.save_preferences("en")
+  testthat::local_mocked_bindings(.snapshot_editor = function() NULL,
+    rcodeagent_status = function() "test", .models_for_account = function() c(Test = "test-model"), .package = "rcodeagent")
+  shiny::testServer(rcodeagent:::.rcodeagent_server, {
+    session$setInputs(ui_language = "es")
+    expect_equal(rcodeagent:::.read_preferences()$language, "en")
+    expect_equal(ui_language(), "en")
+    session$setInputs(ui_language_choice = "es")
+    expect_equal(rcodeagent:::.read_preferences()$language, "es")
+    session$setInputs(ui_language_choice = "invalid")
+    expect_equal(rcodeagent:::.read_preferences()$language, "es")
+  })
+})

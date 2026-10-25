@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <!-- Original rcodeagent vectors: selected compact structure family C. -->
+  <symbol id="c-new" viewBox="0 0 24 24"><path d="M4 3h10l6 6v12H4V3Zm10 0v6h6M8 14h8m-4-4v8"/></symbol>
+  <symbol id="c-history" viewBox="0 0 24 24"><path d="M3 15V3h13M7 7h14v14H7V7Zm4 4h6m-6 4h4"/><path d="m3 19 4 2-4 2"/></symbol>
+  <symbol id="c-editor" viewBox="0 0 24 24"><path d="m8 15 2-9 6-3 5 5-3 6-9 2-1-1Zm1 0 6-6M3 21h17m-16-4 4 4"/><circle cx="15" cy="9" r="1.5"/></symbol>
+  <symbol id="c-plan" viewBox="0 0 24 24"><path d="M3 3h5v5H3V3Zm8 7h5v5h-5v-5Zm6 7h5v5h-5v-5ZM5.5 8v4.5H11m2.5 2.5v4.5H17"/></symbol>
+  <symbol id="c-auto" viewBox="0 0 24 24"><path d="m12 2 9 5v10l-9 5-9-5V7l9-5Zm1 4-5 7h4l-1 5 5-7h-4l1-5Z"/></symbol>
+  <symbol id="c-ask" viewBox="0 0 24 24"><path d="M12 5 3 3v15l9 2m0-15 9-2v9M12 5v8"/><circle cx="17" cy="17" r="4"/><path d="m20 20 2 2M6 7l3 1m-3 3 3 1"/></symbol>
+</svg>
