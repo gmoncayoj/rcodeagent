@@ -1,9 +1,0 @@
-{
-  "passed": true,
-  "english_and_spanish": true,
-  "http_stage_and_code": true,
-  "safe_request_id": true,
-  "no_terminal_formatting": true,
-  "no_synthetic_secrets": true,
-  "no_page_errors": []
-}

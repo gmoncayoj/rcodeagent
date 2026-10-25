@@ -1,9 +1,0 @@
-{
-  "passed": true,
-  "no_duplicate_label": true,
-  "two_disconnected_actions": true,
-  "authenticated_email_only": true,
-  "cleared_on_disconnect": true,
-  "new_account_email_replaces_old": true,
-  "page_errors": []
-}

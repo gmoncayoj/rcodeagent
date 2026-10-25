@@ -60,7 +60,6 @@ Code submitted for execution uses your R session permissions and may be queued b
 
 - [English user manual](docs/manual/rcodeagent-0.1.0-Manual-EN.pdf)
 - [Spanish user manual](docs/manual/rcodeagent-0.1.0-Manual-ES.pdf)
-- [CRAN preparation and validation](docs/validation/cran-readiness.md)
 
 **Author and maintainer:** José Gamarra-Moncayo
 

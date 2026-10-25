@@ -50,3 +50,9 @@ conversations/
 *~
 .DS_Store
 Thumbs.db
+
+# Public repository directories
+/.github/*
+!/.github/workflows/
+/docs/*
+!/docs/manual/
