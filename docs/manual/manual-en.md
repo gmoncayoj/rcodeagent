@@ -14,7 +14,7 @@ Quick start: install the package, open Addins > rcodeagent, sign in, choose a mo
 
 Maintainer contact: gamarramoncayoj@gmail.com
 
-Project license: GPL (>= 3), GNU GPL version 3 or later. Full text is available in LICENSE.md.
+Project license: GPL (>= 3), GNU GPL version 3 or later. The full text is supplied with R in share/licenses/GPL-3 and at https://www.gnu.org/licenses/gpl-3.0.html.
 
 ## 1. Installation and first launch
 
@@ -23,6 +23,7 @@ Project license: GPL (>= 3), GNU GPL version 3 or later. Full text is available 
 - R 4.2.0 or later and RStudio Desktop. Available native verification concerns Windows; identical behavior across platforms is not guaranteed.
 - Internet for dependencies, sign-in and requests. Your account must have effective access to the service and compatible models.
 - A writable user location for R packages, preferences, history and encrypted credentials.
+- PDF conversation export requires Cairo support in R. On macOS, install XQuartz: https://www.xquartz.org/.
 
 ### Install the distribution
 

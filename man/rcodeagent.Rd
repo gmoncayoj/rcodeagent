@@ -49,6 +49,8 @@ are included in the additional review. Changes are not saved to disk automatical
 Console output is not automatically collected or shared with the model.
 Closing the gadget does not remove saved OAuth credentials.
 Local status is not a connectivity test.
+Conversation export to PDF requires Cairo support in R. On macOS, this also
+requires XQuartz; see \url{https://www.xquartz.org/}.
 }
 \value{
 \code{rcodeagent()} and \code{rcodeagent_login()} invisibly return the native job ID.

@@ -18,7 +18,7 @@ Encoding: UTF-8
 Depends: R (>= 4.2.0)
 SystemRequirements: RStudio Desktop (interactive use), web browser, Internet
     access, operating system credential store, eligible ChatGPT Plus or Pro
-    account (model requests)
+    account (model requests), Cairo support (PDF export), XQuartz (macOS PDF export)
 Imports:
     shiny,
     htmltools,

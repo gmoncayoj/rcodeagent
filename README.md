@@ -24,6 +24,8 @@ remotes::install_github("gmoncayoj/rcodeagent", upgrade = "never")
 rcodeagent::rcodeagent()
 ```
 
+PDF conversation export requires an R installation with Cairo support. On macOS, install [XQuartz](https://www.xquartz.org/) for this feature.
+
 You can also launch the assistant from **Addins → rcodeagent**. Sign in, choose an available model and start in **Normal** mode.
 
 After disconnecting, choose **Use another account** to authorize a different ChatGPT account. Check the identity shown in your browser before approving access.
@@ -52,7 +54,7 @@ mean(scores, na.rm = TRUE)
 
 ## Usage considerations
 
-Review generated code and results, and report problems with synthetic examples. Current validation and platform limitations are documented in the validation report.
+Review generated code and results, and report problems with synthetic examples. Automated tests use synthetic credentials and mocked service responses; native sign-in and model access require an eligible account.
 
 Code submitted for execution uses your R session permissions and may be queued by RStudio. Selected context is sent to the authorized service. Share only code and data you are authorized to send. Credentials remain in the operating-system credential store; local histories and exports must also be handled as potentially sensitive files.
 

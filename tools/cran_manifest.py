@@ -1,11 +1,18 @@
 """Bind completed CRAN-style checks to the exact local source archive."""
 from pathlib import Path
+import argparse
+from datetime import date
 import hashlib
 import json
 import re
 import tarfile
 
 ROOT = Path(__file__).resolve().parents[1]
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--evidence-root', default='.local/cran-final-0.1.0')
+parser.add_argument('--verified-on', default=date.today().isoformat())
+args = parser.parse_args()
+evidence = ROOT / args.evidence_root
 
 
 def sha(path):
@@ -21,7 +28,7 @@ def dcf(text):
         elif ":" in line:
             key, value = line.split(":", 1)
             fields[key] = value.strip()
-    return fields
+    return {key: value.strip() for key, value in fields.items()}
 
 
 metadata = dcf((ROOT / "DESCRIPTION").read_text(encoding="utf-8"))
@@ -45,6 +52,7 @@ with tarfile.open(archive) as bundle:
             built = dcf(data.decode("utf-8"))
             assert built["Version"] == version and built["License"] == "GPL (>= 3)"
             assert built["Author"] == "Jos\u00e9 Gamarra-Moncayo [aut, cre]"
+            assert all(built.get(key) == value for key, value in metadata.items()), 'DESCRIPTION mismatch'
         else:
             assert source.read_bytes() == data, relative
         source_hashes.append(f"{sha(source)}  {relative.as_posix()}")
@@ -54,16 +62,21 @@ assert "beta" not in (ROOT / "README.md").read_text(encoding="utf-8").lower()
 
 configurations = [
     ("Windows R-release", ".local/validation/rcodeagent.Rcheck", None),
-    ("Linux R-release", ".local/cran-prep/linux-release/rcodeagent.Rcheck", ".local/cran-prep/linux-release"),
-    ("Linux R-devel", ".local/cran-prep/linux-devel/check/rcodeagent.Rcheck", ".local/cran-prep/linux-devel"),
+    ("Linux R-release", evidence / "linux-release/check/rcodeagent.Rcheck", evidence / "linux-release"),
+    ("Linux R-devel", evidence / "linux-devel/check/rcodeagent.Rcheck", evidence / "linux-devel"),
 ]
 checks = []
+copies = []
 for environment, directory, container_directory in configurations:
     directory = ROOT / directory
     log = directory / "00check.log"
     text = log.read_text(encoding="utf-8").replace("\u2018", "'").replace("\u2019", "'")
     assert "* DONE" in text and f"version '{version}'" in text, environment
+    assert "* using option '--as-cran'" in text, environment
+    assert re.search(r'checking PDF version of manual .* OK', text), environment
+    assert re.search(r'checking HTML version of manual .* OK', text), environment
     status = re.search(r"^Status: (.+)$", text, re.M)
+    assert status, environment
     counts = {"errors": 0, "warnings": 0, "notes": 0}
     for number, kind in re.findall(r"(\d+)\s+(ERRORS?|WARNINGS?|NOTES?)", status[1] if status else "", re.I):
         counts[{"ERROR": "errors", "WARNING": "warnings", "NOTE": "notes"}[kind.upper().rstrip("S")]] = int(number)
@@ -75,25 +88,28 @@ for environment, directory, container_directory in configurations:
     if container_directory:
         container = ROOT / container_directory
         assert sha(container / archive.name) == archive_hash
-        names = ("candidate-sha256.txt", "candidate-sha256-after.txt") if environment.endswith("release") else ("check-input-sha256.txt", "check-final-sha256.txt")
+        assert (container / 'check-exit.txt').read_text().strip() == '0'
+        names = ("archive-before.sha256", "archive-after.sha256")
         for name in names:
             assert (container / name).read_text().split()[0].upper() == archive_hash
     else:
-        assert archive_hash in (ROOT / ".local/cran-prep/reproducible-release.log").read_text(encoding="utf-8").upper()
+        assert (evidence / 'windows-check-exit.txt').read_text().strip() == '0'
+        assert archive_hash in (evidence / 'windows-release.log').read_text(encoding="utf-8").upper()
     public = ROOT / "docs/validation" / ("cran-" + environment.lower().replace(" ", "-") + ".log")
-    public.write_bytes(log.read_bytes())
     public_tests = public.with_name(public.stem + "-tests.log")
-    public_tests.write_bytes(test_log.read_bytes())
+    copies.extend(((log, public), (test_log, public_tests)))
     checks.append(dict(environment=environment, r_version=re.search(r"^\* using R (.+)$", text, re.M)[1],
                        command="R CMD check --as-cran", log=public.relative_to(ROOT).as_posix(),
-                       log_sha256=sha(public), tests_passed=int(tests[4]),
-                       tests_log=public_tests.relative_to(ROOT).as_posix(), tests_log_sha256=sha(public_tests), **counts))
+                       log_sha256=sha(log), tests_passed=int(tests[4]),
+                       tests_log=public_tests.relative_to(ROOT).as_posix(), tests_log_sha256=sha(test_log), **counts))
 
-report = dict(package="rcodeagent", version=version, verified_on="2026-10-25", archive=archive.relative_to(ROOT).as_posix(),
+report = dict(package="rcodeagent", version=version, verified_on=args.verified_on, archive=archive.relative_to(ROOT).as_posix(),
               archive_sha256=archive_hash, archive_bytes=archive.stat().st_size,
               archive_files=len(source_hashes), source_files_equal=len(source_hashes)-1,
               r_sources_ascii=True, checks=checks,
-              limitations=["No CRAN submission or remote CI run", "Automated checks use synthetic service/editor fixtures; native IDE/provider lifecycle is separate"])
+              limitations=["No CRAN submission; prior remote CI checked a different archive", "Automated checks use synthetic service/editor fixtures; native IDE/provider lifecycle is separate"])
+for source, destination in copies:
+    destination.write_bytes(source.read_bytes())
 (ROOT / "docs/validation/cran-checks.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
 (ROOT / "docs/validation/source-files.sha256").write_text("\n".join(sorted(source_hashes)) + "\n", encoding="utf-8")
 print(json.dumps(report, indent=2))
