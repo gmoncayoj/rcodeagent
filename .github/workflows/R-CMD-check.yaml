@@ -26,10 +26,10 @@ jobs:
           r-version: ${{ matrix.config.r }}
           use-public-rspm: true
       - uses: r-lib/actions/setup-tinytex@v2
-      - name: Install PDF manual fonts
+        env:
+          TINYTEX_INSTALLER: TinyTeX
+      - name: Verify PDF manual fonts
         run: |
-          tlmgr update --self
-          tlmgr install courier helvetic times inconsolata
           kpsewhich pcrr8t.tfm
       - uses: r-lib/actions/setup-pandoc@v2
       - name: Install HTML checker on Linux
