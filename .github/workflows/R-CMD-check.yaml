@@ -26,12 +26,24 @@ jobs:
           r-version: ${{ matrix.config.r }}
           use-public-rspm: true
       - uses: r-lib/actions/setup-tinytex@v2
+      - name: Install PDF manual fonts
+        shell: bash
+        run: |
+          tlmgr update --self
+          tlmgr install courier helvetic times inconsolata
+          kpsewhich pcrr8t.tfm
       - uses: r-lib/actions/setup-pandoc@v2
       - name: Install HTML checker on Linux
         if: runner.os == 'Linux'
         run: |
           sudo apt-get update
           sudo apt-get install -y tidy
+      - name: Install macOS graphics and HTML dependencies
+        if: runner.os == 'macOS'
+        run: |
+          brew install --cask xquartz
+          brew install tidy-html5
+          echo "$(brew --prefix tidy-html5)/bin" >> "$GITHUB_PATH"
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: any::rcmdcheck
